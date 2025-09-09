@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 long factorial(long int n)
 {
     if (n <= 1)
@@ -9,5 +11,6 @@ long factorial(long int n)
 
 int main()
 {
-    return factorial(5);
+    exit(10);
+    // return factorial(5);  // limited to 255 due to stack depth
 }

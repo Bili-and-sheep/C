@@ -16,6 +16,8 @@ void write_number(long number)
     write_digit(number % 10);
 }
 
+int count = 0;
+
 void syracuse(long n)
 {
     write_number(n);
@@ -29,16 +31,19 @@ void syracuse(long n)
         // write_number(n);
         // write(1, "\n", 1);
         syracuse(n / 2);
+        count += 1;
     }
     else
     {
         // write_number(n);
         // write(1, "\n", 1);
         syracuse(3 * n + 1);
+        count += 1;
     }
 }
 
 int main()
 {
     syracuse(14);
+    write(1, "Nb operations: ", count);
 }
